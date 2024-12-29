@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preetika Gupta - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <p>Portfolio</p>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p class="sub-title">Creative Web Developer</p>
+                <h1>Hi, I'm <span class="highlight">Preetika Gupta</span></h1>
+                <p>I craft user-friendly and visually stunning websites tailored to your needs.</p>
+                <a href="#contact" class="btn">Contact Me</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+            <div class="about-img">
+                <img src="image.png" alt="Preetika Gupta">
+            </div>
+                <div class="about-content">
+                <h2 class="section-title">About Me</h2>
+                <p>
+                    I'm a dedicated web developer with expertise in HTML, CSS, JavaScript, and responsive design. My passion lies in creating visually captivating and highly functional websites that provide seamless user experiences.
+                </p>
+                <br>I specialize in building websites that meet modern web standards, with a focus on performance, accessibility, and aesthetics. My approach combines creativity and technical precision to deliver outstanding results.<br>
+                Let's collaborate to turn your ideas into reality!
+                <div class="tabs">
+                    <button class="tab-link active" onclick="openTab(event, 'skills')">Skills</button>
+                    <button class="tab-link" onclick="openTab(event, 'experience')">Experience</button>
+                    <button class="tab-link" onclick="openTab(event, 'projects')">Projects</button>
+                </div>
+                <div id="skills" class="tab-content active">
+                    <ul>
+                        <li>Frontend Development</li>
+                        <li>Backend Development</li>
+                        <li>Web Animation</li>
+                    </ul>
+                </div>
+                <div id="experience" class="tab-content">
+                    <ul>
+                        <li>Company A - Frontend Developer</li>
+                        <li>Company B - Backend Developer</li>
+                    </ul>
+                </div>
+                <div id="projects" class="tab-content">
+                    <ul>
+                        <li>Portfolio Website</li>
+                        <li>Landing Page Design</li>
+                        <li>Interactive Calculator</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">My Services</h2>
+            <div class="services-grid">
+                <div class="service">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Design</h3>
+                    <p>Transforming your vision into stunning, user-friendly websites.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Graphic Design</h3>
+                    <p>Creating visuals that speak louder than words.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> 2k23.csai2313671@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +91 99778954</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/preetika260606"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/preetika-gupta-a8613b314/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/Preetika8188"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea placeholder="Message"></textarea>
+                        <button class="btn">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright &copy; Preetika <i class="fa-solid fa-heart"></i>. All rights reserved </p>
+        </div>
+      </div>
+        
+    </section>
+
+    <script>
+        function openTab(event, tabName) {
+            document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+            document.querySelector(`#${tabName}`).classList.add('active');
+
+            document.querySelectorAll('.tab-link').forEach(tl => tl.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
